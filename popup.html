@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockAlertAgent</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>📈 StockAlertAgent</h1>
+      <p class="subtitle">AI-powered stock monitoring</p>
+    </div>
+
+    <!-- Natural Language Input -->
+    <div class="input-section">
+      <div class="input-container">
+        <textarea 
+          id="naturalInput" 
+          placeholder="Tell me what you want to monitor...
+Examples:
+• Watch AAPL stock and alert me
+• Add Google and Tesla to my watchlist
+• Monitor Microsoft with 5% threshold"
+          rows="3"
+        ></textarea>
+        <button id="processInput" class="primary-btn">
+          <span class="btn-text">Add to Watchlist</span>
+          <span class="loading-spinner" style="display: none;">⏳</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Watchlist Display -->
+    <div class="watchlist-section">
+      <div class="section-header">
+        <h3>📊 Your Watchlist</h3>
+        <button id="refreshAll" class="icon-btn" title="Refresh all prices">🔄</button>
+      </div>
+      
+      <div id="watchlistContainer">
+        <div class="empty-state">
+          <p>No stocks in watchlist yet</p>
+          <p class="small-text">Add stocks using natural language above</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings -->
+    <div class="settings-section">
+      <details>
+        <summary>⚙️ Settings</summary>
+        <div class="settings-content">
+          <label>
+            <input type="checkbox" id="enableNotifications" checked>
+            Enable browser notifications
+          </label>
+          <label>
+            Check interval:
+            <select id="checkInterval">
+              <option value="5">5 minutes</option>
+              <option value="15">15 minutes</option>
+              <option value="30" selected>30 minutes</option>
+              <option value="60">1 hour</option>
+            </select>
+          </label>
+          <label>
+            Gemini API Key:
+            <input type="password" id="apiKey" placeholder="Enter your Gemini API key">
+          </label>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <script src="lib/gemini-client.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
