@@ -18,12 +18,12 @@ An AI-powered Chrome extension for intelligent stock monitoring with natural lan
 ### Prerequisites
 
 - Google Chrome browser
-- Gemini API key ([Get one here](https://makersuite.google.com/app/apikey))
+- Gemini API key ([Get one here](https://aistudio.google.com/app/api-keys))
 
 ### Installation
 
 1. **Clone the repository**
-git clone https://github.com/yourusername/stock-alert-agent.git
+git clone https://github.com/krishnaganesh007/agentic-stock-alerter.git
 cd stock-alert-agent
 
 text
