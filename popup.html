@@ -48,6 +48,23 @@ Examples:
       </div>
     </div>
 
+    <!-- Logs Section - ADD THIS -->
+    <div class="logs-section">
+      <div class="section-header">
+        <h3>📋 Agent Logs</h3>
+        <div class="log-controls">
+          <button id="clearLogs" class="icon-btn" title="Clear logs">🗑️</button>
+          <button id="toggleLogs" class="icon-btn" title="Toggle logs">📋</button>
+        </div>
+      </div>
+      
+      <div id="logsContainer" class="logs-container" style="display: none;">
+        <div class="logs-content" id="logsContent">
+          <div class="empty-logs">No logs yet. Add a stock to see agent activity.</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Settings -->
     <div class="settings-section">
       <details>
